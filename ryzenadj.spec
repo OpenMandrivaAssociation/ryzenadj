@@ -9,7 +9,7 @@ Source0:	https://github.com/FlyGoat/RyzenAdj/archive/v%{version}/RyzenAdj-%{vers
 
 BuildRequires:  cmake
 BuildRequires:  pkgconfig(libpci)
-Provides:		RyzenAdj = %{EVRD}
+Provides:	RyzenAdj = %{EVRD}
 
 %description
 Adjust power management settings for Ryzen Mobile Processors.
@@ -24,8 +24,12 @@ Adjust power management settings for Ryzen Mobile Processors.
 	-DBUILD_SHARED_LIBS=OFF
 %make_build
 
-%install
-%make_install -C build
+# There is no instal target. Let's install files manually.
+#install
+#make_install -C build
+
+mkdir -p %{buildroot}%{_bindir}
+install -m755 build/ryzenadj %{buildroot}%{_bindir}
 
 %files
 %license LICENSE
