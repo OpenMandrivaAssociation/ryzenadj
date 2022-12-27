@@ -28,7 +28,9 @@ Adjust power management settings for Ryzen Mobile Processors.
 #install
 #make_install -C build
 
-install -D -m0755 build/%{name} %{buildroot}%{_bindir}/%{name}
+%install
+mkdir -p %{buildroot}%{_bindir}
+mv %{_builddir}/%{name}-%{version}/%__cmake_builddir/ryzenadj %{buildroot}%{_bindir}/ryzenadj
 
 %files
 %license LICENSE
