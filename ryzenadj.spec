@@ -1,5 +1,5 @@
 Name:		ryzenadj
-Version:	0.14.0
+Version:	0.15.0
 Release:	1
 License:	GPLv3
 Summary:	Adjust power management settings for Ryzen Mobile Processors
