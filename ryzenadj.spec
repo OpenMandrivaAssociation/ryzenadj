@@ -1,5 +1,5 @@
 Name:		ryzenadj
-Version:	0.17.0
+Version:	0.19.0
 Release:	1
 License:	GPLv3
 Summary:	Adjust power management settings for Ryzen Mobile Processors
@@ -17,7 +17,7 @@ Adjust power management settings for Ryzen Mobile Processors.
 #------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n RyzenAdj-%{version}
+%autosetup -p1 -n RyzenAdj-0.19.0
 
 %build
 %cmake \
